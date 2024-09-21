@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47203414-c37e-4acb-985b-86310e28edcb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fixtures/products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/versions/7237de57f6fa_create_products_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/repositories.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/services.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/9c2ae1c6c480_create_cart_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/repositories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cart/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/repositories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/repositories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/user/Projects/Pycharm/fastapi-sneakers/src",
+    "last_opened_file_path": "/Users/user/Projects/Pycharm/fastapi-sneakers/src/cart",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +62,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/cart" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/.venv" />
       <recent name="$PROJECT_DIR$" />
@@ -87,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726774769759</updated>
-      <workItem from="1726774772543" duration="6903000" />
+      <workItem from="1726774772543" duration="19722000" />
     </task>
     <servers />
   </component>

@@ -31,10 +31,9 @@ class ProductRepository:
         if limit is not None and offset is not None:
             query = query.limit(limit).offset(offset)
 
-        res = await session.execute(query)
-        products = res.scalars()
+        products = await session.execute(query)
 
-        return list(products)
+        return products.scalars()
 
     @classmethod
     async def get(cls, product_id: int, session: AsyncSession) -> Product | None:

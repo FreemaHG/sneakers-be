@@ -1,5 +1,3 @@
-import random
-
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.products.models import Product
@@ -33,7 +31,6 @@ class ProductService:
         )
 
         # TODO Добавить кэширование
-        random.shuffle(products)  # Перемешивание товаров
 
         return products
 
