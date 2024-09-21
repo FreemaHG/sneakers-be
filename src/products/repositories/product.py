@@ -3,7 +3,7 @@ from typing import List
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.products.models import Product
+from src.products.models.product import Product
 
 
 class ProductRepository:

@@ -1,19 +1,18 @@
-from sqlalchemy import Integer, ForeignKey
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.database import Base
 from src.products.models.product import Product
 
 
-class Cart(Base):
+class FavouriteProduct(Base):
     """
-    Корзина с товарами
+    Избранные товары
     """
 
-    __tablename__ = 'cart'
+    __tablename__ = 'favourite_product'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True, index=True)
     product_id: Mapped[int] = mapped_column(ForeignKey('product.id', ondelete='RESTRICT'))
-    count: Mapped[int] = mapped_column(Integer, default=1)
 
     product: Mapped[Product] = relationship("Product", lazy='joined')

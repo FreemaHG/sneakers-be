@@ -65,7 +65,7 @@ async def add_product(
     },
     status_code=status.HTTP_200_OK,
 )
-async def add_product(
+async def delete_product(
     product_id: int,
     session: AsyncSession = Depends(get_async_session),
 ):

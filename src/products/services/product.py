@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.products.models import Product
-from src.products.repositories import ProductRepository
+from src.products.models.product import Product
+from src.products.repositories.product import ProductRepository
 
 
 class ProductService:
@@ -21,7 +21,6 @@ class ProductService:
         :param session: объект асинхронной сессии
         :return: список с товарами
         """
-        # TODO Возврат из кэша если есть
 
         products = await ProductRepository.get_list(
             title=title,
@@ -29,9 +28,6 @@ class ProductService:
             offset=offset,
             session=session
         )
-
-        # TODO Добавить кэширование
-
         return products
 
     @classmethod
@@ -42,10 +38,6 @@ class ProductService:
         :param session: объект асинхронной сессии
         :return: объект товара
         """
-        # TODO Возврат из кэша если есть
 
         post = await ProductRepository.get(product_id=product_id, session=session)
-
-        # TODO Добавить кэширование
-
         return post

@@ -7,7 +7,8 @@ from alembic import context
 
 from src.config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
 from src.database import Base, metadata
-from src.products.models import Product
+from src.products.models.product import Product
+from src.products.models.favourite import FavouriteProduct
 from src.cart.models import Cart
 
 # this is the Alembic Config object, which provides

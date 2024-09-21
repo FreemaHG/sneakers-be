@@ -1,16 +1,15 @@
 from decimal import Decimal
 
-from pydantic import BaseModel, computed_field, Field
+from pydantic import BaseModel, Field, computed_field
 
 from src.products.schemas.product import ProductSchema
 
 
-class CartSchema(BaseModel):
+class FavouriteProductSchema(BaseModel):
     """
-    Схема для возврата данных о товаре в корзине
+    Схема для возврата данных об избранном товаре
     """
 
-    # count: int
     product: ProductSchema = Field(exclude=True)
 
     @computed_field()
@@ -30,10 +29,9 @@ class CartSchema(BaseModel):
         return self.product.image
 
 
-class CartAddSchema(BaseModel):
+class FavouriteAddSchema(BaseModel):
     """
-    Схема для добавления товара в корзину
+    Схема для добавления товара в избранное
     """
 
     id: int
-    count: int = Field(default=1)

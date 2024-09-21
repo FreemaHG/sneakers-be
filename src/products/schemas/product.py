@@ -1,6 +1,6 @@
 from decimal import Decimal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, computed_field
 
 
 class ProductSchema(BaseModel):

@@ -5,8 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from starlette import status
 
 from src.database import get_async_session
-from src.products.schemas import ProductSchema
-from src.products.services import ProductService
+from src.products.schemas.product import ProductSchema
+from src.products.services.product import ProductService
 from src.router import BaseRouter
 from src.schemas import ResponseSchema
 

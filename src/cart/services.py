@@ -5,8 +5,8 @@ from starlette import status
 from src.cart.models import Cart
 from src.cart.repositories import CartRepository
 from src.cart.schemas import CartAddSchema
-from src.products.models import Product
-from src.products.repositories import ProductRepository
+from src.products.models.product import Product
+from src.products.repositories.product import ProductRepository
 
 
 class CartService:
@@ -33,7 +33,7 @@ class CartService:
         :param session: объект асинхронной сессии
         :return: новая запись о товаре в корзине
         """
-        product = await ProductRepository.get(product_id=new_product.product_id, session=session)
+        product = await ProductRepository.get(product_id=new_product.id, session=session)
 
         if not product:
             raise HTTPException(

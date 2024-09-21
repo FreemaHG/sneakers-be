@@ -3,63 +3,60 @@ from typing import List
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.cart.models import Cart
+from src.products.models.favourite import FavouriteProduct
 from src.products.models.product import Product
 
 
-class CartRepository:
+class FavouriteRepository:
     """
-    Возврат, добавление и удаление товаров из корзины
+    Возврат, добавление и удаление товаров из избранного
     """
 
     @classmethod
-    async def get_list(cls, session: AsyncSession) -> List[Cart]:
+    async def get_list(cls, session: AsyncSession) -> List[FavouriteProduct]:
         """
-        Возврат товаров в корзине
+        Возврат избранных товаров
         :param session: объект асинхронной сессии
         :return: список с товарами
         """
-
-        query = select(Cart)
+        query = select(FavouriteProduct)
         products = await session.execute(query)
 
         return products.scalars()
 
     @classmethod
-    async def get(cls, product_id: int, session: AsyncSession) -> Cart | None:
+    async def get(cls, product_id: int, session: AsyncSession) -> FavouriteProduct | None:
         """
-        Возврат записи о товаре в корзине по id товара
+        Возврат записи об избранном товаре по id товара
         :param product_id: идентификатор товара
         :param session: объект асинхронной сессии
         :return: объект записи о товаре
         """
-        query = select(Cart).where(Cart.product_id == product_id)
+        query = select(FavouriteProduct).where(FavouriteProduct.product_id == product_id)
         record = await session.execute(query)
 
         return record.scalar_one_or_none()
 
-
     @classmethod
-    async def add_product(cls, product: Product, count: int, session: AsyncSession) -> Cart | None:
+    async def add_product(cls, product: Product, session: AsyncSession) -> FavouriteProduct | None:
         """
-        Добавление товара в корзину
+        Добавление товара в избранное
         :param product: объект товара
-        :param count: кол-во товара
         :param session: объект асинхронной сессии
-        :return: новая запись о добавленном товаре
+        :return: новая запись об избранном товаре
         """
 
-        record = Cart(product=product, count=count)
+        record = FavouriteProduct(product=product)
         session.add(record)
         await session.commit()
 
         return record
 
     @classmethod
-    async def delete(cls, record: Cart, session: AsyncSession) -> None:
+    async def delete(cls, record: FavouriteProduct, session: AsyncSession) -> None:
         """
-        Удаление товара из корзины
-        :param record: запись о товаре в корзине для удаления
+        Удаление товара из избранного
+        :param record: запись об избранном товаре для удаления
         :param session: объект асинхронной сессии
         :return: None
         """

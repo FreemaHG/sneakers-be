@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47203414-c37e-4acb-985b-86310e28edcb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/versions/9c2ae1c6c480_create_cart_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cart/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cart/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cart/repositories.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cart/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cart/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cart/services.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/products/repositories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/repositories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/products/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cart/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cart/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/schemas/favourite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/schemas/favourite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/services/favourite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/services/favourite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/products/schemas" />
+      <recent name="$PROJECT_DIR$/src/products/models" />
+      <recent name="$PROJECT_DIR$/src/products/routes" />
+      <recent name="$PROJECT_DIR$/src/products/services" />
+      <recent name="$PROJECT_DIR$/src/products/repositories" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -87,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726774769759</updated>
-      <workItem from="1726774772543" duration="19722000" />
+      <workItem from="1726774772543" duration="33891000" />
     </task>
     <servers />
   </component>
