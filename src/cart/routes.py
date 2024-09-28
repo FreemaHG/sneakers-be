@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import Union
 
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -16,9 +16,9 @@ router = BaseRouter(tags=['Корзина'])
 @router.get(
     '/cart',
     name="Возврат товаров в корзине",
-    response_model=List[CartSchema],
+    response_model=list[CartSchema],
     responses={
-        status.HTTP_200_OK: {'model': List[CartSchema]}
+        status.HTTP_200_OK: {'model': list[CartSchema]}
     },
     status_code=status.HTTP_200_OK
 )

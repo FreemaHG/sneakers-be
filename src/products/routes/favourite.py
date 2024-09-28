@@ -1,4 +1,4 @@
-from typing import List, Union
+from typing import Union
 
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -15,9 +15,9 @@ router = BaseRouter(tags=['Избранное'])
 @router.get(
     '/favourite',
     name="Возврат избранных товаров",
-    response_model=List[FavouriteProductSchema],
+    response_model=list[FavouriteProductSchema],
     responses={
-        status.HTTP_200_OK: {'model': List[FavouriteProductSchema]}
+        status.HTTP_200_OK: {'model': list[FavouriteProductSchema]}
     },
 )
 async def get_products(session: AsyncSession = Depends(get_async_session)):

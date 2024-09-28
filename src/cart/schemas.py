@@ -10,7 +10,6 @@ class CartSchema(BaseModel):
     Схема для возврата данных о товаре в корзине
     """
 
-    # count: int
     product: ProductSchema = Field(exclude=True)
 
     @computed_field()
@@ -36,4 +35,3 @@ class CartAddSchema(BaseModel):
     """
 
     id: int
-    count: int = Field(default=1)

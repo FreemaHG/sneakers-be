@@ -5,11 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47203414-c37e-4acb-985b-86310e28edcb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/fixtures/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/import.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/a98b51aca9ad_init_migration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/repositories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/order/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixtures/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/fixtures/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/586b0c6e22d1_add_favourite_product_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7237de57f6fa_create_products_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/9c2ae1c6c480_create_cart_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cart/repositories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/repositories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cart/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/schemas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cart/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cart/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/products/schemas/favourite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/schemas/favourite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/products/services/favourite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/services/favourite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/models/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/models/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/repositories/favourite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/repositories/favourite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/repositories/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/repositories/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/routes/favourite.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/routes/favourite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/products/routes/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/routes/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +52,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2mIr8GttUhTUl4KEJNtscXX0SIi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -37,13 +63,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Python.export.executor": "Run",
+    "Python.import.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/user/Projects/Pycharm/fastapi-sneakers/src/cart",
+    "last_opened_file_path": "/Users/user/Projects/Pycharm/fastapi-sneakers/src/order",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsDialog.application.dockerMachine",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -54,6 +84,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/order" />
       <recent name="$PROJECT_DIR$/src/cart" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/.venv" />
@@ -66,6 +97,80 @@
       <recent name="$PROJECT_DIR$/src/products/services" />
       <recent name="$PROJECT_DIR$/src/products/repositories" />
     </key>
+  </component>
+  <component name="RunManager" selected="Python.import">
+    <configuration name="export" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fastapi-sneakers" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixtures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixtures/export.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="import" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fastapi-sneakers" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixtures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixtures/import.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.import" />
+        <item itemvalue="Python.export" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -83,7 +188,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726774769759</updated>
-      <workItem from="1726774772543" duration="33891000" />
+      <workItem from="1726774772543" duration="34556000" />
+      <workItem from="1727364951201" duration="246000" />
+      <workItem from="1727365213505" duration="22000" />
+      <workItem from="1727365391335" duration="3015000" />
+      <workItem from="1727369964423" duration="1024000" />
+      <workItem from="1727452624485" duration="3297000" />
+      <workItem from="1727509270008" duration="6851000" />
+      <workItem from="1727516602534" duration="11262000" />
     </task>
     <servers />
   </component>
@@ -100,5 +212,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fastapi_sneakers$import.coverage" NAME="import Coverage Results" MODIFIED="1727525985111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixtures" />
+    <SUITE FILE_PATH="coverage/fastapi_sneakers$export.coverage" NAME="export Coverage Results" MODIFIED="1727525633555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fixtures" />
   </component>
 </project>

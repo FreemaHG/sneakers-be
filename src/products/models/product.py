@@ -15,3 +15,12 @@ class Product(Base):
     title: Mapped[str] = mapped_column(String(150))
     price: Mapped[float] = mapped_column(Numeric(10, 2))
     image: Mapped[str] = mapped_column(String(150))
+
+    def to_dict(self) -> dict:
+        """
+        Преобразование модели в словарь
+        """
+        model_dict = {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        model_dict['price'] = str(model_dict['price'])
+
+        return model_dict

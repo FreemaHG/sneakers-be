@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional
 
 from fastapi import Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -17,9 +17,9 @@ router = BaseRouter(tags=['Товары'])
     '/products',
     name="Возврат товаров",
     description="Возврат товаров с возможностью фильтрации по названию и пагинацией",
-    response_model=List[ProductSchema],
+    response_model=list[ProductSchema],
     responses={
-        status.HTTP_200_OK: {'model': List[ProductSchema]}
+        status.HTTP_200_OK: {'model': list[ProductSchema]}
     },
 )
 async def get_products(

@@ -1,5 +1,3 @@
-from typing import List
-
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -13,7 +11,7 @@ class FavouriteRepository:
     """
 
     @classmethod
-    async def get_list(cls, session: AsyncSession) -> List[FavouriteProduct]:
+    async def get_list(cls, session: AsyncSession) -> list[FavouriteProduct]:
         """
         Возврат избранных товаров
         :param session: объект асинхронной сессии
@@ -22,7 +20,7 @@ class FavouriteRepository:
         query = select(FavouriteProduct)
         products = await session.execute(query)
 
-        return products.scalars()
+        return products.scalars().all()
 
     @classmethod
     async def get(cls, product_id: int, session: AsyncSession) -> FavouriteProduct | None:

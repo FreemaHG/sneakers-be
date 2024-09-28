@@ -1,6 +1,4 @@
-from typing import List
-
-from sqlalchemy import select
+from sqlalchemy import select, delete
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.cart.models import Cart
@@ -13,17 +11,22 @@ class CartRepository:
     """
 
     @classmethod
-    async def get_list(cls, session: AsyncSession) -> List[Cart]:
+    async def get_list(cls, session: AsyncSession, products_ids: list[int] = None) -> list[Cart]:
         """
         Возврат товаров в корзине
+        :param products_ids: список с идентификаторами товаров в корзине
         :param session: объект асинхронной сессии
         :return: список с товарами
         """
 
         query = select(Cart)
+
+        if products_ids:
+            query = query.where(Cart.product_id.in_(products_ids))
+
         products = await session.execute(query)
 
-        return products.scalars()
+        return products.scalars().all()
 
     @classmethod
     async def get(cls, product_id: int, session: AsyncSession) -> Cart | None:
@@ -40,16 +43,15 @@ class CartRepository:
 
 
     @classmethod
-    async def add_product(cls, product: Product, count: int, session: AsyncSession) -> Cart | None:
+    async def add_product(cls, product: Product, session: AsyncSession) -> Cart | None:
         """
         Добавление товара в корзину
         :param product: объект товара
-        :param count: кол-во товара
         :param session: объект асинхронной сессии
         :return: новая запись о добавленном товаре
         """
 
-        record = Cart(product=product, count=count)
+        record = Cart(product=product)
         session.add(record)
         await session.commit()
 
@@ -65,4 +67,17 @@ class CartRepository:
         """
 
         await session.delete(record)
+        await session.commit()
+
+    @classmethod
+    async def clear(cls, products_ids: list[int], session: AsyncSession) -> None:
+        """
+        Учистка корзины через удаление всех записей, где встречаются товары с переданными id
+        :param products_ids: список с идентификаторами товаров
+        :param session: объект асинхронной сессии
+        :return: None
+        """
+
+        query = delete(Cart).where(Cart.product_id.in_(products_ids))
+        await session.execute(query)
         await session.commit()

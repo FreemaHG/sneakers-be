@@ -11,7 +11,7 @@ from src.products.repositories.product import ProductRepository
 
 class CartService:
     """
-    Возврат товаров в корзине
+    Возврат, добавление и удаление товаров из корзины
     """
 
     @classmethod
@@ -40,7 +40,7 @@ class CartService:
                 status_code=status.HTTP_404_NOT_FOUND, detail='Товар не найден'
             )
 
-        record = await CartRepository.add_product(product=product , count=new_product.count, session=session)
+        record = await CartRepository.add_product(product=product, session=session)
 
         return record
 
