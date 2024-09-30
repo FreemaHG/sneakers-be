@@ -5,6 +5,8 @@ services:
       context: https://github.com/FreemaHG/sneakers-fe.git
     ports:
       - 80:80
+    depends_on:
+      - sneakers-be
 
   sneakers-be:
     build:

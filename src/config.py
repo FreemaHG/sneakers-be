@@ -14,7 +14,7 @@ DB_NAME = os.environ.get('POSTGRES_DB')
 DB_USER = os.environ.get('POSTGRES_USER')
 DB_PASS = os.environ.get('POSTGRES_PASSWORD')
 
-FE_URL = os.environ.get('FE_URL')
+ALLOWED_ORIGINS = os.environ.get('ALLOWED_ORIGINS')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ALGORITHM = os.environ.get('ALGORITHM')

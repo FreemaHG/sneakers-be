@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from src.config import FE_URL, DEBUG
+from src.config import ALLOWED_ORIGINS, DEBUG
 from src.urls import register_routers
 
 
@@ -11,7 +11,8 @@ app = FastAPI(title='sneakers', debug=DEBUG)
 register_routers(app)
 
 # URL, с которых разрешено делать запросы на сервер
-origins = [FE_URL]
+origins = ALLOWED_ORIGINS.split(',')
+# origins = [ALLOWED_ORIGINS]
 
 # Добавляем в middleware Cors для связки фронта и бэка
 app.add_middleware(
