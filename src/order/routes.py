@@ -7,8 +7,6 @@ from starlette import status
 from src.database import get_async_session
 from src.order.schemas import OrderSchema, OrderCreateSchema
 from src.order.services import OrderService
-from src.order.utils import get_unique_products
-from src.products.schemas.product import ProductSchema
 from src.router import BaseRouter
 from src.schemas import ResponseSchema
 
@@ -18,9 +16,9 @@ router = BaseRouter(tags=['Заказы'])
 @router.get(
     '/orders',
     name="Возврат заказов",
-    response_model=list[ProductSchema],
+    response_model=list[OrderSchema],
     responses={
-        status.HTTP_200_OK: {'model': list[ProductSchema]}
+        status.HTTP_200_OK: {'model': list[OrderSchema]}
     },
     status_code=status.HTTP_200_OK
 )
@@ -29,9 +27,8 @@ async def get_orders(session: AsyncSession = Depends(get_async_session)):
     Возврат заказов
     """
     orders = await OrderService.get_list(session=session)
-    products = await get_unique_products(orders=orders)
 
-    return products
+    return orders
 
 
 @router.post(
