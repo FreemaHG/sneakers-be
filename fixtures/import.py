@@ -8,7 +8,7 @@ from src.products.models.product import Product
 async def import_fixtures():
 
     async with async_session_maker() as session:
-        with open('products.json', 'r', encoding='utf-8') as file:
+        with open('fixtures/products.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
 
         for item in data:

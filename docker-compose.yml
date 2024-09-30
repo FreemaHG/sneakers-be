@@ -1,20 +1,41 @@
 services:
-    sneakers_postgres:
-      image: postgres:latest
-      env_file:
-        - .env.prod
-      container_name: sneakers_postgres
-      restart: always
-      command: -p 5432
-      ports:
-        - 5432:5432
-      volumes:
-        - sneakers_postgres:/var/lib/postgresql/data
-      healthcheck:
-        test: [ "CMD-SHELL", "pg_isready", "-U", "postgres" ]
-        interval: 5s
-        timeout: 5s
-        retries: 5
+
+  sneakers-fe:
+    build:
+      context: https://github.com/FreemaHG/sneakers-fe.git
+    ports:
+      - 80:80
+
+  sneakers-be:
+    build:
+      context: .
+    container_name: sneakers-be
+    restart: on-failure
+    expose:
+      - 8000
+    ports:
+      - 8000:8000
+    command: [ "/docker/api.sh" ]
+    depends_on:
+      sneakers_postgres:
+        condition: service_healthy
+
+  sneakers_postgres:
+    image: postgres:latest
+    env_file:
+      - .env.prod
+    container_name: sneakers_postgres
+    restart: always
+    command: -p 5432
+    ports:
+      - 5432:5432
+    volumes:
+      - sneakers_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready", "-U", "postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
 volumes:
   sneakers_postgres:
